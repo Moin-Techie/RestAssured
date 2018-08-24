@@ -1,0 +1,12 @@
+package getdata;
+
+import org.testng.annotations.Test;
+
+public class GetDataDemo 
+{
+	@Test
+	public void getRequ()
+	{
+		System.out.println("Hello");
+	}
+}

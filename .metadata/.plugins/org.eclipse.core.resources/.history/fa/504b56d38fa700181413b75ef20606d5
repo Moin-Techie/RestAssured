@@ -1,0 +1,9 @@
+package getdata;
+
+public class GetDataDemo 
+{
+	public void getRequ()
+	{
+		
+	}
+}
