@@ -1,0 +1,17 @@
+package getdata;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
+
+public class PostOps 
+{
+	@Test
+	public void postData()
+	{
+		RequestSpecification req = RestAssured.given();
+		
+		req.header("","");
+	}
+}

@@ -1,0 +1,22 @@
+package servercalls;
+
+import base.BaseTest;
+import io.restassured.response.Response;
+
+import static  io.restassured.RestAssured.*;
+
+public class GetDataCalls
+{
+	public static void  getData(String resource)
+	{
+	/*	Response response = given()
+		.when().get(prop.getProperty("RESOURCE"))
+		.then().statusCode(200).extract().response();
+		
+		String json = response.asString();
+		
+		return json;*/
+		
+		System.out.println(prop.getProperty("RESOURCE"));
+	}
+}

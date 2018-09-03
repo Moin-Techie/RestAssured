@@ -1,0 +1,21 @@
+package com.qa.base;
+
+
+
+public class RestClient 
+{
+
+	//Get Method
+	public static void main(String[] args) 
+	{
+
+	}
+//	public void getData(String url)
+//	{
+//		
+//		System.out.println(url);
+//		//RestAssured.get(url);	
+//
+//	}
+
+}

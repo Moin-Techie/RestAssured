@@ -1,0 +1,41 @@
+package utilities;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.testng.annotations.Test;
+import org.w3c.dom.Document;
+/*import org.xml.sax.*;
+import org.w3c.dom.*;
+import javax.xml.parsers.*;*/
+import org.w3c.dom.NodeList;
+
+public class XMLParsing 
+{
+	@Test
+	public void XMLParse() throws Exception
+	{
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		
+		factory.setIgnoringComments(true);
+		factory.setIgnoringElementContentWhitespace(true);
+		factory.setValidating(true);
+		
+		DocumentBuilder builder = factory.newDocumentBuilder();
+		Document document = builder.parse("./Files/Testdata.xml");
+		NodeList address = document.getElementsByTagName("address");
+		
+		for(int i=0;i<address.getLength();i++)
+		{
+			System.out.println(address.item(i));
+		}
+		
+		
+		String rootNode = document.getDocumentElement().getNodeName();//getting the root Node
+		System.out.println(rootNode);
+		System.out.println(rootNode.length());
+		
+	
+	}
+}

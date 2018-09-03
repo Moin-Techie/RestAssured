@@ -1,0 +1,53 @@
+package getdata;
+
+public class TestDataJson 
+
+{
+	public static String testData="[
+  {
+    "id": 1,
+    "title": "json-server",
+    "author": "typicode"
+  },
+  {
+    "id": 21,
+    "title": "json-server21",
+    "author": "typicode21"
+  },
+  {
+    "id": 22,
+    "title": "json-server22",
+    "author": "typicode22"
+  },
+  {
+    "author": "Mohammed Moinuddin A",
+    "id": "25",
+    "title": "Welcome to BPD Team"
+  },
+  {
+    "author": "Moin",
+    "id": "27",
+    "title": "Welcome to API Testing"
+  },
+  {
+    "author": "MJ",
+    "id": "28",
+    "title": "Welcome to Bugger/Othla"
+  },
+  {
+    "author": "Moin_Foodie",
+    "id": "100",
+    "title": "Zumba"
+  },
+  {
+    "id": 211,
+    "title": "json-server21",
+    "author": "Test21"
+  },
+  {
+    "author": "Moin_Fitness",
+    "id": "101",
+    "title": "Zumba"
+  }
+]";
+}

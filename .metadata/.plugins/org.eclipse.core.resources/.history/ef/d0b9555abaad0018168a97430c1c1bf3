@@ -1,0 +1,17 @@
+package testcases;
+
+import org.testng.annotations.Test;
+
+import base.BaseTest;
+import servercalls.GetDataCalls;
+
+public class GetSeverData extends BaseTest
+{
+	@Test
+	public void getServerData()
+	{
+		String rcrs = prop.getProperty("RESOURCE");
+		
+		GetDataCalls.getData(rcrs);
+	}
+}

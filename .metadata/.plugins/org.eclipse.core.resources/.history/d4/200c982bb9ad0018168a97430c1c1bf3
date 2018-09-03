@@ -1,0 +1,18 @@
+package servercalls;
+
+import base.BaseTest;
+import io.restassured.response.Response;
+
+import static  io.restassured.RestAssured.*;
+
+public class GetDataCalls extends BaseTest
+{
+	public String  getData()
+	{
+		Response response = given()
+		.when().get(prop.getProperty("RESOURCE"))
+		.then().statusCode(200).extract().response();
+		
+		String json = response.asString();
+	}
+}

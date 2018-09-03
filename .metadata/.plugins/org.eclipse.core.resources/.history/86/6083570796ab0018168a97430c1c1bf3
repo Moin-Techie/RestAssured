@@ -1,0 +1,33 @@
+package com.qa.base;
+
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Headers;
+import io.restassured.response.Response;
+
+public class RestClient 
+{
+
+	
+	
+	public static void getData(String url)
+	{
+		System.out.println(url);
+		Response response = RestAssured.get(url);
+		int status = response.getStatusCode();
+		System.out.println("STatus Code: "+ status);
+		
+		String responseString = response.asString();
+		System.out.println("JSON String: "+ responseString);
+		
+		Headers headerArray = response.getHeaders();
+		
+		JSONObject json = new JSONObject(responseString);
+		System.out.println("Json from Server->"+ json);
+		
+
+	}
+
+}

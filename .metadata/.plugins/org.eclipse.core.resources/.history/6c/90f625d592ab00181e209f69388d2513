@@ -1,0 +1,20 @@
+package com.qa.base;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class RestClient 
+{
+
+	@Test
+	
+	public static void getData(String url)
+	{
+		Response response = RestAssured.get(url);
+		System.out.println("STatus Code: "+ response);
+
+	}
+
+}

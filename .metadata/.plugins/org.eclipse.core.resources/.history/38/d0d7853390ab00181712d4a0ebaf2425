@@ -1,0 +1,19 @@
+package com.qa.base;
+
+import java.util.Properties;
+
+public class TestBase 
+{
+		public Properties prop;
+
+		public TestBase() 
+		{
+			try 
+			{
+				prop=new Properties();
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+		
+}

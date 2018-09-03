@@ -1,0 +1,100 @@
+package utilities;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+
+/***
+ * 
+ * @author I341561
+ * This has been parsed using Java Json
+ *
+ */
+public class ParseJsonDemo 
+{
+
+	//@Test
+	public void getFakeData()
+	{
+		Response response = RestAssured.get("http://localhost:3000/posts");
+		
+		
+		String data = response.asString();//retrieved Json as String
+		
+		System.out.println(data);
+		
+		
+		//JSONObject json = new JSONObject(data);//parsing the data
+		
+		JSONArray jarray= new JSONArray(data);
+		
+		System.out.println("Array Object is: "+jarray.getJSONObject(1));
+		HashMap  m = new HashMap();
+		for (int i = 0; i < jarray.length(); i++) 
+		{
+			Object ids = jarray.getJSONObject(i).get("id");
+			Object authors = jarray.getJSONObject(i).get("author");
+			Object titles = jarray.getJSONObject(i).get("title");
+			
+			System.out.println("Ids:--->"+ids);
+			System.out.println("authors:--->"+authors);
+			System.out.println("titles:--->"+titles);
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//JSONObject json = new JSONObject(response);
+		
+		
+	}
+	
+	
+	@Test
+	public void getData()
+	{
+		Response response = RestAssured.get("https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
+		
+		
+		String data = response.asString();//retrieved Json as String
+		
+		System.out.println(data);
+		
+		JSONObject json = new JSONObject(data);//parsing the data
+		System.out.println("Object is "+ json.get("sys"));
+		
+		JSONArray jarray= json.getJSONArray("weather");//array of Objects
+		System.out.println("Arrays is: "+jarray);
+		
+		
+		JSONObject json2 = jarray.getJSONObject(0);
+		System.out.println("Array Object is: "+json2);
+		json2.get("description")
+		
+		
+		
+		
+		
+		
+		
+		//JSONObject json = new JSONObject(response);
+		
+		
+	}
+}

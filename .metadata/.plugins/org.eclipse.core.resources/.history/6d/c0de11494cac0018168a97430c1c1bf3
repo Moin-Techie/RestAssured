@@ -1,0 +1,5 @@
+package com.qa.base;
+
+public interface IAutoConstant {
+
+}

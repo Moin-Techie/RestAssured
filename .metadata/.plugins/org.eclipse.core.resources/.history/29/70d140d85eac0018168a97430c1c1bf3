@@ -1,0 +1,31 @@
+package com.qa.base.utilities;
+
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+
+import com.qa.base.TestBase;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class JsonParserDemo extends TestBase
+{
+	@Test
+	public void getData()
+	{
+		String url="https://reqres.in/api/users";
+		Response response = RestAssured.get(url);
+		int status = response.getStatusCode();
+		System.out.println("Status Code: "+ status);
+		
+		String srcFile = response.asString();
+		
+		System.out.println(srcFile);
+		
+		JSONObject json1 = new JSONObject(srcFile);
+		
+		System.out.println(json1.get);
+		
+		
+	}
+}

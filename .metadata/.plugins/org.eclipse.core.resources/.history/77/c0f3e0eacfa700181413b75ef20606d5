@@ -1,0 +1,24 @@
+package getdata;
+
+import org.json.simple.JSONObject;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class PutOps 
+{
+	@Test
+	public void postData()
+	{
+		RequestSpecification req = RestAssured.given();
+		req.header("Content-Type","application/json");
+		
+		JSONObject json=new JSONObject();
+		json.put("id", "");
+		json.put("title", "Zumba");
+		json.put("author", "Moin_Fitness");
+	}
+}

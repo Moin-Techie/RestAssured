@@ -1,0 +1,19 @@
+package com.qa.base;
+
+import org.testng.annotations.Test;
+
+public class RestClient 
+{
+
+	@Test
+	
+	public void getData(String url)
+	{
+		System.out.println("Hello");
+		TestBase td = new TestBase();
+		System.out.println(url);
+		//RestAssured.get(url);	
+
+	}
+
+}

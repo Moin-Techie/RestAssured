@@ -1,0 +1,16 @@
+package com.qa.base;
+
+import org.testng.annotations.Test;
+
+public class RestClient 
+{
+
+	@Test
+	
+	public void getData(String url)
+	{
+		
+
+	}
+
+}

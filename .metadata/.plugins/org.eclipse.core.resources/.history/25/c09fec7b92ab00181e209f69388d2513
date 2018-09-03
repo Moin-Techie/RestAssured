@@ -1,0 +1,12 @@
+package com.qa.testcase;
+
+import org.testng.annotations.Test;
+
+public class GetAndValidateData 
+{
+	@Test
+	public void getData()
+	{
+		
+	}
+}

@@ -1,0 +1,23 @@
+package getdata;
+
+import static io.restassured.RestAssured.given;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class PostDataAtul 
+{
+	@Test
+	public void getData()
+	{
+		RestAssured.baseURI = "http://";
+		
+		Response response = given().queryParam("", "")
+		.when().get("")
+		.then().statusCode(200).extract().response();
+		
+		String str = response.asString();
+	}
+}

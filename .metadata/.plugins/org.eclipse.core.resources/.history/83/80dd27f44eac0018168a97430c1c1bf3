@@ -1,0 +1,56 @@
+package com.qa.base;
+
+import java.util.HashMap;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Headers;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+
+public class RestClient 
+{
+
+	
+	
+	public static void getData(String url)
+	{
+		System.out.println(url);
+		Response response = RestAssured.get(url);
+		int status = response.getStatusCode();
+		System.out.println("Status Code: "+ status);
+		
+		String responseString = response.asString();
+		System.out.println("JSON String: "+ responseString);
+		
+		JSONObject json = new JSONObject(responseString);
+		System.out.println("Json from Server->"+ json);
+		
+		System.out.println("Page: "+json.get("page"));
+		
+		JSONArray jarray = json.getJSONArray("data");
+		System.out.println("Array Size: "+jarray.length());
+
+		System.out.println("1st Array: "+jarray.getJSONObject(0));
+		
+		JSONObject obj1 = jarray.getJSONObject(0);
+		System.out.println("Array Object: "obj1.get("last_name"));
+		
+		String headerArray = response.getHeaders().toString();
+		System.out.println("Headers: "+headerArray);
+		
+//		JsonPath jpath = new JsonPath(headerArray);
+//		
+//		JSONArray jarray = new JSONArray(json);
+//		
+//		System.out.println("Array: "+jarray.getJSONObject(0));
+		
+		//System.out.println("Number of Headers "+ headerArray.size());
+		//System.out.println("1 header: "+ headerArray.getValue("Content-Type"));
+		
+	}
+
+}

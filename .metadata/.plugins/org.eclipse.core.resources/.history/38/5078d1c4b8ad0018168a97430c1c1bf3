@@ -1,0 +1,8 @@
+package servercalls;
+
+import base.BaseTest;
+
+public class GetDataCalls extends BaseTest
+{
+	
+}

@@ -1,0 +1,16 @@
+package getdata;
+
+import java.util.Properties;
+
+import org.testng.annotations.BeforeTest;
+
+public class GetDataAtul 
+{
+	public Properties prop;
+	
+	@BeforeTest
+	public void setup()
+	{
+		prop = new Properties();
+	}
+}

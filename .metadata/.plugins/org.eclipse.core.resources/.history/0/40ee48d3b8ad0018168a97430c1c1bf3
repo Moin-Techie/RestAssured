@@ -1,0 +1,12 @@
+package servercalls;
+
+import base.BaseTest;
+import static  io.restassured.RestAssured.*;
+
+public class GetDataCalls extends BaseTest
+{
+	public void getData()
+	{
+		given();
+	}
+}

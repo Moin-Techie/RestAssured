@@ -1,0 +1,18 @@
+package com.qa.base;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+
+public class RestClient 
+{
+
+	@Test
+	
+	public static void getData(String url)
+	{
+		RestAssured.get(url);
+
+	}
+
+}

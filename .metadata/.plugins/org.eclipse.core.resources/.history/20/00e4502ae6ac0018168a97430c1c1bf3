@@ -1,0 +1,12 @@
+package getdata;
+
+import org.testng.annotations.Test;
+
+public class PostDataAtul 
+{
+	@Test
+	public void getData()
+	{
+		
+	}
+}

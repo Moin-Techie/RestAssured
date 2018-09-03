@@ -1,0 +1,19 @@
+package com.qa.base;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+
+public class RestClient 
+{
+
+	//Get Method
+	@Test
+	public void getData(String url)
+	{
+		TestBase td = new TestBase();
+		url=td.prop.getProperty("URL").concat(td.prop.getProperty("URI"));
+		RestAssured.get(url)
+	}
+	
+}

@@ -1,0 +1,25 @@
+package getdata;
+
+import org.json.simple.JSONObject;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class DeleteOps 
+{
+	@Test
+	public void postData()
+	{
+		RequestSpecification req = RestAssured.given();
+		
+		Response resp = req.delete("http://localhost:3000/posts/99");
+		
+		System.out.println(resp.getStatusCode());
+		System.out.println(resp.asString());
+		
+		
+	}
+}

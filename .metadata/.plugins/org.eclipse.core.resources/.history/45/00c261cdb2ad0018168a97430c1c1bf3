@@ -1,0 +1,12 @@
+package getdata;
+
+import org.testng.annotations.BeforeTest;
+
+public class GetDataAtul 
+{
+	@BeforeTest
+	public void setup()
+	{
+		
+	}
+}

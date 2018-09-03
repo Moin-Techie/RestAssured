@@ -1,0 +1,24 @@
+package getdata;
+
+import org.json.simple.JSONObject;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
+
+public class PostOps 
+{
+	@Test
+	public void postData()
+	{
+		RequestSpecification req = RestAssured.given();
+		
+		req.header("Content-Type","application/json");
+		
+		JSONObject json = new JSONObject();
+		
+		json.put("id", "99");
+		json.put("title", "Selenium_Rest");
+		json.put("author", "Moin_Foodie");
+	}
+}

@@ -1,0 +1,15 @@
+package com.qa.testcase;
+
+import org.testng.annotations.Test;
+
+import com.qa.base.TestBase;
+
+public class GetAndValidateData 
+{
+	@Test
+	public void getData()
+	{
+		TestBase td = new TestBase();
+		td.prop.getProperty("URL").concat(td.prop.getProperty("URI"));
+	}
+}

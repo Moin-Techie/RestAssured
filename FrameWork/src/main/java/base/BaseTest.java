@@ -1,0 +1,27 @@
+package base;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+
+public class BaseTest 
+{
+	public static Properties prop;
+	
+	@BeforeTest
+	public void setup() throws Exception
+	{
+		prop = new Properties();
+		FileInputStream fs = new FileInputStream(new File(System.getProperty("user.dir")+"/src/test/resources/testdata/config.properties"));
+		prop.load(fs);
+		RestAssured.baseURI=prop.getProperty("URI");
+	}
+	
+
+}

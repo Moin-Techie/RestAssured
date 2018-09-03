@@ -1,0 +1,6 @@
+package com.qa.base;
+
+public interface IAutoConstant 
+{
+	int RESPONSE_STATUS_CODE_200=200;
+}

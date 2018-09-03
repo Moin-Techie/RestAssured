@@ -1,0 +1,22 @@
+package com.qa.base;
+
+import com.qa.base.*;
+
+public class RestClient 
+{
+
+	//Get Method
+	public static void main(String[] args) 
+	{
+		TestBase td = new TestBase();
+		String url = td.prop.getProperty("URL").concat(td.prop.getProperty("URI"));
+	}
+//	public void getData(String url)
+//	{
+//		
+//		System.out.println(url);
+//		//RestAssured.get(url);	
+//
+//	}
+
+}

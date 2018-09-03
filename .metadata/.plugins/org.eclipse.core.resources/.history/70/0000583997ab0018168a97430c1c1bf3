@@ -1,0 +1,17 @@
+package com.qa.testcase;
+
+import org.testng.annotations.Test;
+
+import com.qa.base.RestClient;
+import com.qa.base.TestBase;
+
+public class GetAndValidateData extends TestBase
+{
+	@Test
+	public void getData()
+	{
+	
+		String url = prop.getProperty("URL")+(prop.getProperty("URI"));
+		RestClient.getData(url);
+	}
+}

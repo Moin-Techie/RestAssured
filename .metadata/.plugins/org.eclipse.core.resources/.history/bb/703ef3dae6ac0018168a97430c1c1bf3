@@ -1,0 +1,35 @@
+package getdata;
+
+import static io.restassured.RestAssured.given;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class PostDataAtul 
+{
+	public Properties prop;
+	@BeforeTest
+	public void setup()
+	{
+		prop = new Properties();
+		FileInputStream file = new FileInputStream(new File(System.getProperty("user.dir")+"/src/test/"));
+		
+	}
+	@Test
+	public void getData()
+	{
+		RestAssured.baseURI = "http://";
+		
+		Response response = given().queryParam("", "")
+		.when().get("")
+		.then().statusCode(200).extract().response();
+		
+		String str = response.asString();
+	}
+}
