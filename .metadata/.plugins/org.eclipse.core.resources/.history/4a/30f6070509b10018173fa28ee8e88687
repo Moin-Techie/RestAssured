@@ -1,0 +1,19 @@
+package getdata;
+
+import org.testng.annotations.Test;
+
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.*;
+import utilities.BaseTest;
+
+public class DeletAtul extends BaseTest
+{
+	@Test
+	public void deletData()
+	{
+		 Response response = given()
+		.when().delete(prop.getProperty("RESOURCE"))
+		.then().statusCode(200).extract().response();
+	}
+}

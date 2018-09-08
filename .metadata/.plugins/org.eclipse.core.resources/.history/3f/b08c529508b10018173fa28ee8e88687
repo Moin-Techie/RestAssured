@@ -1,0 +1,15 @@
+package getdata;
+
+import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+import utilities.BaseTest;
+
+public class DeletAtul extends BaseTest
+{
+	@Test
+	public void deletData()
+	{
+		RestAssured
+	}
+}

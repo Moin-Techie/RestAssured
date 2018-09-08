@@ -1,0 +1,14 @@
+package getdata;
+
+import org.testng.annotations.Test;
+
+import utilities.BaseTest;
+
+public class DeletAtul extends BaseTest
+{
+	@Test
+	public void deletData()
+	{
+		
+	}
+}

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2250" started-at="2018-09-01T07:21:00Z" finished-at="2018-09-01T07:21:02Z">
+  <suite name="Default suite" duration-ms="1817" started-at="2018-09-05T12:42:16Z" finished-at="2018-09-05T12:42:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2250" started-at="2018-09-01T07:21:00Z" finished-at="2018-09-01T07:21:02Z">
-      <class name="getdata.GetDataAtul">
-        <test-method status="PASS" signature="setup()[pri:0, instance:getdata.GetDataAtul@51efea79]" name="setup" is-config="true" duration-ms="417" started-at="2018-09-01T12:51:00Z" finished-at="2018-09-01T12:51:00Z">
+    <test name="Default test" duration-ms="1817" started-at="2018-09-05T12:42:16Z" finished-at="2018-09-05T12:42:18Z">
+      <class name="getdata.DeletAtul">
+        <test-method status="PASS" signature="setup()[pri:0, instance:getdata.DeletAtul@5034c75a]" name="setup" is-config="true" duration-ms="458" started-at="2018-09-05T18:12:16Z" finished-at="2018-09-05T18:12:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getData()[pri:0, instance:getdata.GetDataAtul@51efea79]" name="getData" duration-ms="1811" started-at="2018-09-01T12:51:00Z" finished-at="2018-09-01T12:51:02Z">
+        <test-method status="PASS" signature="deletData()[pri:0, instance:getdata.DeletAtul@5034c75a]" name="deletData" duration-ms="1333" started-at="2018-09-05T18:12:16Z" finished-at="2018-09-05T18:12:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-      </class> <!-- getdata.GetDataAtul -->
+        </test-method> <!-- deletData -->
+      </class> <!-- getdata.DeletAtul -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

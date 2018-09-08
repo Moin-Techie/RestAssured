@@ -1,0 +1,8 @@
+package getdata;
+
+import utilities.BaseTest;
+
+public class DeletAtul extends BaseTest
+{
+	
+}
